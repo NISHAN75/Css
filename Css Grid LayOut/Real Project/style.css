@@ -1,0 +1,24 @@
+.container{
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit , minMax(100px , 1fr));
+    grid-gap: 3px;
+    /* grid flow control korar jono grid-auto-flow */
+    grid-auto-flow:dense;
+}
+.container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.vertical {
+    grid-column: auto / span 2;
+}
+.herizantoli {
+    grid-row: auto / span 2;
+}
+.big{
+    grid-column: auto / sapn 2;
+    grid-row: auto / span 2;
+}
+ 
