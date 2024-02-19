@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 2 Advance</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- video link : https://www.youtube.com/watch?v=kEFIdXzQXYw&t=1368s -->
+
+    <style>
+        /*---------- auto fit useCase---------------- */
+        /* auto fit tar  tar width pora puri niba kono  kali jaiga rakba na */
+        /* .container{ */
+            /* display: grid;
+            height: 100%; */
+            /* grid-template-columns: repeat(auto-fit, minMax(90px , 1fr)); */
+            /* minMax hoccha amon akta function colum guta ta daynamic baba handle kora sa 90px jaiga na paila 1fr dea auto jaiga block kora karva */
+            /* grid-template-rows: repeat(2, 1fr); */
+        /* } */
+        /*-------- auto Fill UseCase------------ */
+        /* auto fill jokon tar content gula sob gula dak tar width pai jaba and ar pora set kora width priman same width box Make korva */
+        /* .container{
+            display: grid;
+            height: 100%;
+            grid-template-columns: repeat(auto-fill, minMax(90px , 1fr));
+            grid-template-rows: repeat(2, 1fr);
+        } */
+        /*----------  grid-auto-rows useCase-------- */
+         /* .container{
+            display: grid;
+            height: 100%;
+            grid-template-columns: repeat(auto-fit, minMax(90px , 1fr));
+            grid-template-rows: repeat(1, 1fr);
+            grid-auto-rows: 1fr;
+        } */
+        /*---------- justify-content/align content / justify iteam / align iteams useCase -------- */
+        .container{
+            display: grid;
+            height: 100%;
+            grid-template-columns: repeat(5,90px);
+            grid-template-rows: repeat(2,90px);
+            grid-gap: 3px;
+            justify-content: end;
+            /* justify content / align iteams dea pura content modify hoi */
+            /* justify items / align iteams dea sudu matcho iteam box modify hoi  */
+            /* nijaka nija modify korar jono justify-self use korta hoba */
+        }
+        .seven{
+            justify-self: center;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div class="seven">7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+</body>
+</html>
