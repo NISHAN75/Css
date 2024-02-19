@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+
+        /* =============================system 1 ===============================*/
+        /* .container{
+            display: grid;
+            grid-template: repeat(3 , 1fr) /repeat(3 , 1fr);
+        } */
+        .container{
+            
+            /* display: grid; */
+            /* grid-template-columns: 1fr 1fr; */
+            /* grid-template-columns: repeat(12, 1fr); */
+            /* container / parent ar akta height na dila  (grid-template-rows) kaj korva na */
+            /* grid-template-rows: 50px auto 50px;
+            height: 100%; */
+        }
+        /* likar different */
+        /* .header {
+            grid-column-start: 1;
+            grid-column-end: -1;
+        } */
+        .header{
+            /* grid-column: 1 / 3; */
+            /* grid-column: 1 / -1; */
+        }
+        /* different style */
+        .footer {
+            /* grid-column: 1 / -1;  */
+            /* span অর্থ  বিস্তার বা ছড়িয়ে যাওয়া */
+            /*  1 / span 2 মানি হচ্ছে 1 থেকে শুরু হয়ে 2 কলামে ছড়িয়ে গেছে */
+            /* grid-column: 1 / span 2;  */
+        }
+        /* grid column set korar time ata use korTa Hoba */
+        .content {
+            /* grid-column: 2 / -1; */
+        }
+
+        /* ==================system 2========================= */
+        .container{
+            height: 100%;
+            display: grid;
+            grid-template-columns: (12, 1fr);
+            grid-template-rows:50px auto 50px;
+            grid-template-areas: 
+            "h h h h h h h h h h h h"
+            "m m c c c c c c c c c c"
+            "f f f f f f f f f f f f"
+            ;
+        }
+        .header{
+            grid-area: h;
+        }
+        .footer{
+            grid-area: f;
+
+        }
+        .menu{
+            grid-area: m;
+        }
+        .content{
+            grid-area: c;
+        }
+
+/* ==================system 2========================= */
+
+
+
+    </style>
+</head>
+<body>
+    <!-- layout one -->
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
